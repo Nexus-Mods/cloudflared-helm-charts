@@ -1,11 +1,13 @@
+# Forked from https://github.com/cloudflare/helm-charts.
+
 # Cloudflare Helm Charts
 
 ### About
-A convenient location to publish Cloudflare helm charts
+A convenient location to publish Cloudflare helm charts. 
 
 ### Setup
 ```bash
-helm repo add cloudflare https://cloudflare.github.io/helm-charts
+helm repo add cloudflare https://nexus-mods.github.io/cloudflared-helm-charts/
 helm repo update
 ```
 
