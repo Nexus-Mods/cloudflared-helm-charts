@@ -80,3 +80,6 @@ tolerations: []
 
 # Default affinity is to spread out over nodes; use this to override.
 affinity: {}
+
+metrics:
+  enabled: true
