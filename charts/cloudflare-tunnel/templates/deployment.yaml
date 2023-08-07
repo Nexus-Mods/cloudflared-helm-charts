@@ -36,6 +36,12 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          {{- if .Values.metrics.enabled }}
+          ports:
+          - containerPort: 2000
+            name: metrics
+            protocol: TCP
+          {{- end }}
           args:
             - tunnel
             # Points cloudflared to the config file, which configures what
